@@ -1,0 +1,77 @@
+.hangmanContainer {
+  position: relative;
+  width: 300px;
+  height: 516px;
+}
+
+.gallow,
+.head,
+.neck,
+.body,
+.rightArm,
+.leftArm,
+.leftLeg,
+.rightLeg,
+.rightFoot,
+.leftFoot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.gallow {
+  left: 0;
+  top: 0;
+  /* background-image: url("../../assets/gallow.png"); */
+}
+
+.head {
+  left: 103px;
+  top: 60px;
+  background-image: url("../../assets/head.svg");
+}
+
+.neck {
+  left: 163px;
+  top: 219px;
+  background-image: url("../../assets/neck.svg");
+  z-index: -1;
+}
+
+.body {
+  left: 122px;
+  top: 240px;
+  background-image: url("../../assets/body.svg");
+}
+
+.rightArm {
+  left: 208px;
+  top: 240px;
+  background-image: url("../../assets/rightbody-arm.svg");
+}
+.leftArm {
+  left: 28px;
+  top: 240px;
+  background-image: url("../../assets/leftbody-arm.svg");
+}
+.rightLeg {
+  left: 190px;
+  top: 410px;
+  background-image: url("../../assets/right-leg.svg");
+}
+.leftLeg {
+  left: 95px;
+  top: 410px;
+  background-image: url("../../assets/left-leg.svg");
+}
+.rightFoot {
+  left: 224px;
+  top: 541px;
+  background-image: url("../../assets/right-foot.svg");
+}
+.leftFoot {
+  left: 71px;
+  top: 541px;
+  background-image: url("../../assets/left-foot.svg");
+}
