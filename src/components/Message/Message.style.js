@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   max-width: 1300px;
   margin: 40px auto;
   display: flex;
@@ -10,8 +9,3 @@ const Container = styled.div`
   top: 0;
   left: 0; */
 `;
-const Message = () => {
-  return <Container>You have already entered this letter</Container>;
-};
-
-export default Message;

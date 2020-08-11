@@ -1,15 +1,6 @@
 import React from 'react';
-import LetterBox from './LetterBox';
-import styled from 'styled-components';
-
-const WordContainer = styled.div`
-  max-width: 1300px;
-  margin: 100px auto 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  align-items: center;
-`;
+import LetterBox from '../LetterBox/LetterBox';
+import { WordContainer } from './Word.style';
 
 const Word = ({ selectedWord, correctLetters }) => {
   return (

@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import GlobalStyle from './theme/GlobalStyles';
 
-import Hangman from './components/Hangman';
-import Word from './components/Word';
-import WrongLetters from './components/WrongLetters';
-import Message from './components/Message';
-import PopUp from './components/PopUp';
+import Hangman from './components/Hangman/Hangman';
+import Word from './components/Word/Word';
+import WrongLetters from './components/WrongLetters/WrongLetters';
+import Message from './components/Message/Message';
+import PopUp from './components/PopUp/PopUp';
 
 import showMessage from './utils/showMessage';
 

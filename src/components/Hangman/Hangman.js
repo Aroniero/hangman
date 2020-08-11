@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
+import { Container } from './Hangman.style';
 import {
   Gallow,
   Head,
@@ -12,19 +11,12 @@ import {
   LeftFoot,
   RightLeg,
   RightFoot,
-} from './HangmanParts/HangmanParts';
-
-const HangmanContainer = styled.div`
-  top: 5vh;
-  width: 373px;
-  height: 600px;
-  position: relative;
-`;
+} from '../HangmanParts/HangmanParts';
 
 const Hangman = ({ wrongLetters }) => {
   const errors = wrongLetters.length;
   return (
-    <HangmanContainer>
+    <Container>
       <Gallow />
       {errors > 0 && <Head />}
       {errors > 1 && <Neck />}
@@ -35,7 +27,7 @@ const Hangman = ({ wrongLetters }) => {
       {errors > 6 && <LeftFoot />}
       {errors > 7 && <RightLeg />}
       {errors > 8 && <RightFoot />}
-    </HangmanContainer>
+    </Container>
   );
 };
 

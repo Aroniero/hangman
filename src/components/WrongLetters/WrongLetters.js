@@ -1,16 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const StyledWrongLetters = styled.div`
-  position: absolute;
-  top: 5vh;
-  right: 400px;
-  width: 400px;
-`;
+import { WrongLettersContainer } from './WrongLetters.style';
 
 const WrongLetters = ({ wrongLetters }) => {
   return (
-    <StyledWrongLetters>
+    <WrongLettersContainer>
       {wrongLetters.length > 0 && <h2>Wrong letters:</h2>}
       {wrongLetters
         .map((letter, id) => <span key={id}>{letter}</span>)
@@ -18,7 +11,7 @@ const WrongLetters = ({ wrongLetters }) => {
           (prev, curr) => (prev === null ? [curr] : [prev, ', ', curr]),
           null
         )}
-    </StyledWrongLetters>
+    </WrongLettersContainer>
   );
 };
 
