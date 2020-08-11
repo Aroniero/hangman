@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from './theme/GlobalStyles';
+import theme from './theme/theme';
 
 import Hangman from './components/Hangman/Hangman';
 import Word from './components/Word/Word';
@@ -16,7 +17,7 @@ const GameContainer = styled.div`
   height: 100vh;
 `;
 
-const words = ['programming', 'react', 'redux'];
+const words = ['programming', 'react', 'redux', 'japierdole'];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 const App = () => {
@@ -39,8 +40,6 @@ const App = () => {
         } else {
           if (!wrongLetters.includes(letter)) {
             setWrongLetters((wrongLetters) => [...wrongLetters, letter]);
-
-            // updateWrongLettersEl();
           } else {
             showMessage(setShowNotification);
           }
@@ -54,16 +53,14 @@ const App = () => {
 
   function playAgain() {
     setPlayable(true);
-
     setCorrectLetters([]);
     setWrongLetters([]);
     const random = Math.floor(Math.random() * words.length);
-
     selectedWord = words[random];
   }
-  // console.log(playable);
+
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GameContainer>
         <GlobalStyle />
         <Hangman wrongLetters={wrongLetters} />
@@ -71,7 +68,6 @@ const App = () => {
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
         {showNotification && <Message />}
       </GameContainer>
-
       <PopUp
         playAgain={playAgain}
         correctLetters={correctLetters}
@@ -79,7 +75,7 @@ const App = () => {
         selectedWord={selectedWord}
         setPlayable={setPlayable}
       />
-    </>
+    </ThemeProvider>
   );
 };
 

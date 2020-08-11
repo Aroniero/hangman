@@ -5,7 +5,4 @@ export const Container = styled.div`
   margin: 40px auto;
   display: flex;
   justify-content: center;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
 `;
