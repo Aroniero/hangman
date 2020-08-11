@@ -1,16 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-// import "./Hangman.css";
-import Gallow from './HangmanParts/Gallow';
-import Head from './HangmanParts/Head';
-import LeftLeg from './HangmanParts/LeftLeg';
-import LeftFoot from './HangmanParts/LeftFoot';
-import Body from './HangmanParts/Body';
-import LeftArm from './HangmanParts/LeftArm';
-import RightArm from './HangmanParts/RightArm';
-import RightFoot from './HangmanParts/RightFoot';
-import RightLeg from './HangmanParts/RightLeg';
-import Neck from './HangmanParts/Neck';
+
+import {
+  Gallow,
+  Head,
+  Neck,
+  Body,
+  RightArm,
+  LeftArm,
+  LeftLeg,
+  LeftFoot,
+  RightLeg,
+  RightFoot,
+} from './HangmanParts/HangmanParts';
 
 const HangmanContainer = styled.div`
   top: 5vh;
