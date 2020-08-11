@@ -1,8 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledRightFoot = styled.div`
+  position: absolute;
+  left: 224px;
+  top: 541px;
+`;
 
 const RightFoot = () => {
   return (
-    <div>
+    <StyledRightFoot>
       <svg
         width="62"
         height="31"
@@ -19,7 +26,7 @@ const RightFoot = () => {
           fill="black"
         />
       </svg>
-    </div>
+    </StyledRightFoot>
   );
 };
 

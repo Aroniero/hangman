@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const LetterContainer = styled.div`
   background: #575757;
@@ -16,14 +16,14 @@ const Letter = styled.p`
   font-weight: bold;
   color: white;
   text-transform: uppercase;
-  font-size: 74px;
-  display: ${({ isFound }) => (isFound ? "block" : "none")};
+  font-size: 60px;
+  /* display: ${({ isFound }) => (isFound ? 'block' : 'none')}; */
 `;
 
-const LetterBox = ({ value, isFound }) => {
+const LetterBox = ({ letter }) => {
   return (
     <LetterContainer>
-      <Letter isFound={isFound}>{isFound && value}</Letter>
+      <Letter>{letter}</Letter>
     </LetterContainer>
   );
 };

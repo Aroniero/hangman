@@ -1,8 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledRightLeg = styled.div`
+  position: absolute;
+  left: 190px;
+  top: 410px;
+`;
 
 const RigthLeg = () => {
   return (
-    <div>
+    <StyledRightLeg>
       <svg
         width="72"
         height="146"
@@ -18,7 +25,7 @@ const RigthLeg = () => {
           fill="#247B2D"
         />
       </svg>
-    </div>
+    </StyledRightLeg>
   );
 };
 

@@ -1,8 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledHead = styled.div`
+  position: absolute;
+  left: 103px;
+  top: 60px;
+`;
 
 const Head = () => {
   return (
-    <div>
+    <StyledHead>
       <svg
         width="152"
         height="164"
@@ -33,7 +40,7 @@ const Head = () => {
         <circle cx="48.1979" cy="66.2874" r="10" fill="black" />
         <circle cx="102.198" cy="66.2874" r="10" fill="black" />
       </svg>
-    </div>
+    </StyledHead>
   );
 };
 

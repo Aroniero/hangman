@@ -1,8 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledBody = styled.div`
+  position: absolute;
+  left: 122px;
+  top: 240px;
+`;
 
 const Body = () => {
   return (
-    <div>
+    <StyledBody>
       <svg
         width="112"
         height="180"
@@ -22,7 +29,7 @@ const Body = () => {
           fill="#247B2D"
         />
       </svg>
-    </div>
+    </StyledBody>
   );
 };
 

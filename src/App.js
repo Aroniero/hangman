@@ -1,84 +1,85 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import LetterBox from "./components/LetterBox/LetterBox";
-import Hangman from "./components/Hangman/Hangman";
-import GlobalStyle from "./theme/GlobalStyles";
-import Word from "./components/Word/Word";
-import styled from "styled-components";
-import Message from "./components/Message/Message";
+import styled from 'styled-components';
+import GlobalStyle from './theme/GlobalStyles';
+
+import Hangman from './components/Hangman';
+import Word from './components/Word';
+import WrongLetters from './components/WrongLetters';
+import Message from './components/Message';
+import PopUp from './components/PopUp';
+
+import showMessage from './utils/showMessage';
+
+const GameContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
+
+const words = ['programming', 'react', 'redux'];
+let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 const App = () => {
-  const [word, setWord] = useState("andrzej");
-  const [letters, setLetters] = useState([
-    { value: "a", isFound: false },
-    { value: "n", isFound: false },
-    { value: "d", isFound: true },
-    { value: "r", isFound: false },
-    { value: "z", isFound: false },
-    { value: "e", isFound: false },
-    { value: "j", isFound: false },
-  ]);
-  const [missedLetters, setMissedLetters] = useState([]);
-  const [missedCounter, setMissedCounter] = useState(0);
-  const [errorMsg, setErrorMsg] = useState("");
+  const [playable, setPlayable] = useState(true);
+  const [correctLetters, setCorrectLetters] = useState([]);
+  const [wrongLetters, setWrongLetters] = useState([]);
+  const [showNotification, setShowNotification] = useState(false);
 
-  // const extractLetters = (w) => {
-  //   return w.split("").map((letter) => {
-  //     return {
-  //       value: letter,
-  //       isFound: false,
-  //     };
-  //   });
-  // };
   useEffect(() => {
-    window.addEventListener("keypress", (event) => {
-      checkLetter(event);
-    });
+    const handleKeyDown = (e) => {
+      const { key, keyCode } = e;
+      if (playable && keyCode >= 65 && keyCode <= 90) {
+        const letter = key.toLowerCase();
+        if (selectedWord.includes(letter)) {
+          if (!correctLetters.includes(letter)) {
+            setCorrectLetters((correctLetters) => [...correctLetters, letter]);
+          } else {
+            showMessage(setShowNotification);
+          }
+        } else {
+          if (!wrongLetters.includes(letter)) {
+            setWrongLetters((wrongLetters) => [...wrongLetters, letter]);
 
-    return () => {
-      window.removeEventListener("keypress", (event) => {
-        checkLetter(event);
-      });
+            // updateWrongLettersEl();
+          } else {
+            showMessage(setShowNotification);
+          }
+        }
+      }
     };
-  });
-  const checkLetter = ({ key }) => {
-    if (word.includes(key)) {
-      const newLetters = letters.map(({ value, isFound }) => {
-        isFound === true && value === key && setErrorMessage();
-        value === key && (isFound = true);
-        return { value: value, isFound: isFound };
-      });
-      console.log(newLetters);
-      setLetters(newLetters);
-    } else if (missedLetters.includes(key)) {
-      return setErrorMessage();
-    } else {
-      setMissedLetters([...missedLetters, key]);
-      console.log(missedLetters);
-      setMissedCounter(missedCounter + 1);
-      return;
-    }
-  };
+    window.addEventListener('keydown', handleKeyDown);
 
-  const setErrorMessage = () => {
-    setErrorMsg("Try to use another one");
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [correctLetters, playable, wrongLetters]);
 
-    setTimeout(function () {
-      setErrorMsg("");
-    }, 7000);
-  };
+  function playAgain() {
+    setPlayable(true);
 
+    setCorrectLetters([]);
+    setWrongLetters([]);
+    const random = Math.floor(Math.random() * words.length);
+
+    selectedWord = words[random];
+  }
+  // console.log(playable);
   return (
-    <div className="App">
-      <GlobalStyle />
-      <Hangman />
-      <div>
-        Litery zmissowane {missedLetters}, licznik nietrafionych liter
-        {missedCounter}
-      </div>
-      <Word letters={letters} />
-      <Message errorMessage={errorMsg} />
-    </div>
+    <>
+      <GameContainer>
+        <GlobalStyle />
+        <Hangman wrongLetters={wrongLetters} />
+        <WrongLetters wrongLetters={wrongLetters} />
+        <Word selectedWord={selectedWord} correctLetters={correctLetters} />
+        {showNotification && <Message />}
+      </GameContainer>
+
+      <PopUp
+        playAgain={playAgain}
+        correctLetters={correctLetters}
+        wrongLetters={wrongLetters}
+        selectedWord={selectedWord}
+        setPlayable={setPlayable}
+      />
+    </>
   );
 };
 

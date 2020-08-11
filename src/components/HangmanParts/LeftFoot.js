@@ -1,8 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledLeftFoot = styled.div`
+  position: absolute;
+  left: 71px;
+  top: 541px;
+`;
 
 const LeftFoot = () => {
   return (
-    <div>
+    <StyledLeftFoot>
       <svg
         width="62"
         height="31"
@@ -18,7 +25,7 @@ const LeftFoot = () => {
           fill="black"
         />
       </svg>
-    </div>
+    </StyledLeftFoot>
   );
 };
 
