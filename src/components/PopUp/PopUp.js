@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, Card, Button } from './PopUp.style';
-import checkWin from '../../utils/checkWin';
+
 import useCheckWin from './PopUp.hook';
 
 const PopUp = (props) => {

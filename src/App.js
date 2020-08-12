@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from './theme/GlobalStyles';
@@ -10,54 +10,22 @@ import WrongLetters from './components/WrongLetters/WrongLetters';
 import Message from './components/Message/Message';
 import PopUp from './components/PopUp/PopUp';
 
-import showMessage from './utils/showMessage';
+import useHandleGame from './App.hook';
 
 const GameContainer = styled.div`
   width: 100vw;
   height: 100vh;
 `;
 
-const words = ['programming', 'react', 'redux', 'japierdole'];
-let selectedWord = words[Math.floor(Math.random() * words.length)];
-
 const App = () => {
-  const [playable, setPlayable] = useState(true);
-  const [correctLetters, setCorrectLetters] = useState([]);
-  const [wrongLetters, setWrongLetters] = useState([]);
-  const [showNotification, setShowNotification] = useState(false);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      const { key, keyCode } = e;
-      if (playable && keyCode >= 65 && keyCode <= 90) {
-        const letter = key.toLowerCase();
-        if (selectedWord.includes(letter)) {
-          if (!correctLetters.includes(letter)) {
-            setCorrectLetters((correctLetters) => [...correctLetters, letter]);
-          } else {
-            showMessage(setShowNotification);
-          }
-        } else {
-          if (!wrongLetters.includes(letter)) {
-            setWrongLetters((wrongLetters) => [...wrongLetters, letter]);
-          } else {
-            showMessage(setShowNotification);
-          }
-        }
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [correctLetters, playable, wrongLetters]);
-
-  function playAgain() {
-    setPlayable(true);
-    setCorrectLetters([]);
-    setWrongLetters([]);
-    const random = Math.floor(Math.random() * words.length);
-    selectedWord = words[random];
-  }
+  const [
+    selectedWord,
+    correctLetters,
+    wrongLetters,
+    showNotification,
+    setPlayable,
+    playAgain,
+  ] = useHandleGame();
 
   return (
     <ThemeProvider theme={theme}>
