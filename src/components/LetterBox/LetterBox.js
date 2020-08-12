@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Letter } from './LetterBox.style';
 
-const LetterBox = ({ letter }) => {
+const LetterBox = ({ letter, disabled }) => {
   return (
-    <Container>
+    <Container disabled={disabled}>
       <Letter>{letter}</Letter>
     </Container>
   );

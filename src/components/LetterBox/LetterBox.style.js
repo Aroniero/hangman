@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #575757;
-  border-radius: 16px;
+  background: ${({ disabled }) => (disabled ? 'gray' : '#575757')};
+  border-radius: 12px;
   width: 100px;
   height: 123px;
   display: flex;

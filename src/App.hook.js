@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import showMessage from './utils/showMessage';
 
-const words = ['programming', 'react', 'redux'];
+const words = ['veroni', 'react', 'redux'];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 const useHandleGame = () => {
