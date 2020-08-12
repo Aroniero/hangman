@@ -2,15 +2,11 @@ import React from 'react';
 import LetterBox from '../LetterBox/LetterBox';
 import { WordContainer } from './Word.style';
 
-const Word = ({ selectedWord, correctLetters }) => {
-  console.log(selectedWord.length);
-  const numberOfDisabledLetters = 10 - selectedWord.length;
+import createDisabledLetters from '../../utils/createDisabledLetters';
 
-  const disabledLetters = Array.from(
-    { length: numberOfDisabledLetters },
-    () => ''
-  );
-  console.log(disabledLetters);
+const Word = ({ selectedWord, correctLetters }) => {
+  const disabledLetters = createDisabledLetters(selectedWord);
+
   return (
     <WordContainer>
       {disabledLetters.map((disabledLetter, id) => {
