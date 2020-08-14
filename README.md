@@ -18,7 +18,7 @@ This project was inspired by this [video](https://www.youtube.com/watch?v=iUYfpP
 ## Screenshots 📺
 
 <div style="display:flex; ">
-    <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_1.png" alt="Screenshot_1" style="zoom:30%;" />
+    <img src="./src/assets/images/screenshots/Screenshot_1" alt="Screenshot_1" style="zoom:30%;" />
     <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_2.png" alt="Screenshot_2" style="zoom:30%;" />
 </div>
 <div style="display:flex; ">
