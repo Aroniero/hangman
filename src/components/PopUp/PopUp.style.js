@@ -18,7 +18,6 @@ export const Card = styled.div`
   border-radius: 20px;
   text-align: center;
   font-size: 0.8em;
-  /* max-width: 80%; */
 `;
 
 export const Button = styled.button`

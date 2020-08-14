@@ -1,15 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# hangman-game
 
-## Available Scripts
+## Project Overview 🎉
 
-In the project directory, you can run:
+This project was inspired by this [video](https://www.youtube.com/watch?v=iUYfpPjXad4). I wanted to reconstruct the hangman game presented in this video. All images in this app I've made in Figma.
 
-### `npm start`
+## Tech/framework used 🔧
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Npm packages                                        |               Description                |
+| --------------------------------------------------- | :--------------------------------------: |
+| [React](https://reactjs.org/)                       |   Library for building user interfaces   |
+| [Styled Components](https://styled-components.com/) | Visual primitives for the component age. |
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+| Graphic design tools            |                 Description                 |
+| ------------------------------- | :-----------------------------------------: |
+| [Figma](https://www.figma.com/) | Vector graphics editor and prototyping tool |
 
-Its traditional hangman game. Inspired by this [lecture](https://www.youtube.com/watch?v=iUYfpPjXad4)
+## Screenshots 📺
+
+<div style="display:flex; ">
+    <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_1.png" alt="Screenshot_1" style="zoom:30%;" />
+    <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_2.png" alt="Screenshot_2" style="zoom:30%;" />
+</div>
+<div style="display:flex; ">
+    <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_3.png" alt="Screenshot_3" style="zoom:30%;" />
+    <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_3.png" alt="Screenshot_3" style="zoom:30%;" />
+</div>
+
+## Installation 💾
+
+```bash
+git clone https://github.com/Aroniero/hangman.git
+npm install
+npm run start
+```
+
+## Available scripts :scroll:
+
+| Command         | Description            |
+| --------------- | ---------------------- |
+| `npm run start` | Open local server      |
+| `npm run build` | Create optimized build |
+| `npm run test`  | Run tests              |
+| `npm run eject` | Eject CRA              |
