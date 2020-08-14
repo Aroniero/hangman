@@ -11,7 +11,7 @@ export const WordContainer = styled.div`
     max-width: 700px;
     margin: 0 auto;
   }
-  @media (${({ theme }) => theme.media.md}) {
+  @media (${({ theme }) => theme.media.lg}) {
     gap: 5px;
     max-width: 900px;
   }
