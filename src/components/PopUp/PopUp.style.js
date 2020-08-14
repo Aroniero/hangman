@@ -2,13 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: absolute;
-
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: gray;
-  opacity: 0.7;
+  background-color: ${({ theme }) => theme.colors.blue2};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,9 +14,11 @@ export const Container = styled.div`
 
 export const Card = styled.div`
   background-color: white;
-  padding: 40px 30px;
+  padding: 30px 20px;
   border-radius: 20px;
   text-align: center;
+  font-size: 0.8em;
+  /* max-width: 80%; */
 `;
 
 export const Button = styled.button`

@@ -8,25 +8,21 @@ import {
   RightArm,
   LeftArm,
   LeftLeg,
-  LeftFoot,
   RightLeg,
-  RightFoot,
 } from '../HangmanParts/HangmanParts';
 
 const Hangman = ({ wrongLetters }) => {
   const errors = wrongLetters.length;
   return (
     <Container>
-      <Gallow />
-      {errors > 0 && <Head />}
-      {errors > 1 && <Neck />}
-      {errors > 2 && <Body />}
-      {errors > 3 && <LeftArm />}
-      {errors > 4 && <RightArm />}
-      {errors > 5 && <LeftLeg />}
-      {errors > 6 && <LeftFoot />}
-      {errors > 7 && <RightLeg />}
-      {errors > 8 && <RightFoot />}
+      {errors === 0 && <Gallow />}
+      {errors === 1 && <Head />}
+      {errors === 2 && <Neck />}
+      {errors === 3 && <Body />}
+      {errors === 4 && <LeftArm />}
+      {errors === 5 && <RightArm />}
+      {errors === 6 && <LeftLeg />}
+      {errors === 7 && <RightLeg />}
     </Container>
   );
 };

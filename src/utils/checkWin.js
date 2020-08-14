@@ -7,7 +7,7 @@ export default function checkWin(correct, wrong, word) {
     }
   });
 
-  if (wrong.length === 9) status = 'lose';
+  if (wrong.length === 7) status = 'lose';
 
   return status;
 }
