@@ -1,4 +1,8 @@
+<div align="center">
+    
 # hangman-game
+    
+</div>
 
 ## Project Overview 🎉
 
@@ -17,14 +21,10 @@ This project was inspired by this [video](https://www.youtube.com/watch?v=iUYfpP
 
 ## Screenshots 📺
 
-<div style="display:flex; ">
-    <img src="src/assets/screenshots/Screenshot_1.png" alt="Screenshot_1" width="49%" />
-    <img src="src/assets/screenshots/Screenshot_2.png" alt="Screenshot_2" width="49%" />
-</div>
-<div style="display:flex; ">
-    <img src="src/assets/screenshots/Screenshot_3.png" alt="Screenshot_3" width="49%" />
-    <img src="src/assets/screenshots/Screenshot_4.png" alt="Screenshot_3" width="49%" />
-</div>
+<img src="src/assets/screenshots/Screenshot_1.png" alt="Screenshot_1" />
+<img src="src/assets/screenshots/Screenshot_2.png" alt="Screenshot_2"  />
+<img src="src/assets/screenshots/Screenshot_3.png" alt="Screenshot_3" />
+<img src="src/assets/screenshots/Screenshot_4.png" alt="Screenshot_3"  />
 
 ## Installation 💾
 
