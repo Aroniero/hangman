@@ -18,12 +18,12 @@ This project was inspired by this [video](https://www.youtube.com/watch?v=iUYfpP
 ## Screenshots 📺
 
 <div style="display:flex; ">
-    <img src="./src/assets/images/screenshots/Screenshot_1" alt="Screenshot_1" style="zoom:30%;" />
-    <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_2.png" alt="Screenshot_2" style="zoom:30%;" />
+    <img src="src/assets/screenshots/Screenshot_1.png" alt="Screenshot_1" width="49%" />
+    <img src="src/assets/screenshots/Screenshot_2.png" alt="Screenshot_2" width="49%" />
 </div>
 <div style="display:flex; ">
-    <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_3.png" alt="Screenshot_3" style="zoom:30%;" />
-    <img src="C:\Users\ABC\Desktop\hangman images\Screenshot_3.png" alt="Screenshot_3" style="zoom:30%;" />
+    <img src="src/assets/screenshots/Screenshot_3.png" alt="Screenshot_3" width="49%" />
+    <img src="src/assets/screenshots/Screenshot_4.png" alt="Screenshot_3" width="49%" />
 </div>
 
 ## Installation 💾
