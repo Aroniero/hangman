@@ -10,14 +10,10 @@ This project was inspired by this [video](https://www.youtube.com/watch?v=iUYfpP
 
 ## Tech/framework used 🔧
 
-| Npm packages                                        |               Description                |
-| --------------------------------------------------- | :--------------------------------------: |
-| [React](https://reactjs.org/)                       |   Library for building user interfaces   |
-| [Styled Components](https://styled-components.com/) | Visual primitives for the component age. |
-
-| Graphic design tools            |                 Description                 |
-| ------------------------------- | :-----------------------------------------: |
-| [Figma](https://www.figma.com/) | Vector graphics editor and prototyping tool |
+|| Npm packages                                        |               Description                || Graphic design tools            |                 Description                 |
+|---------------------------------------------------| --------------------------------------------------- | -------------------------------------- |------------------------------- | ------------------------------- | :-----------------------------------------: |
+|1.| [React](https://reactjs.org/)                       |   Library for building user interfaces   |1.|[Figma](https://www.figma.com/) | Vector graphics editor and prototyping tool |
+|2.| [Styled Components](https://styled-components.com/) | Visual primitives for the component age. ||
 
 ## Screenshots 📺
 <img src="src/assets/screenshots/Screenshot_1.png" alt="Screenshot_1" />
