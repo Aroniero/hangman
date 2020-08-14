@@ -20,7 +20,6 @@ This project was inspired by this [video](https://www.youtube.com/watch?v=iUYfpP
 | [Figma](https://www.figma.com/) | Vector graphics editor and prototyping tool |
 
 ## Screenshots 📺
-
 <img src="src/assets/screenshots/Screenshot_1.png" alt="Screenshot_1" />
 <img src="src/assets/screenshots/Screenshot_2.png" alt="Screenshot_2"  />
 <img src="src/assets/screenshots/Screenshot_3.png" alt="Screenshot_3" />
